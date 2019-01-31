@@ -5,7 +5,10 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "npm run test",
+    "preversion": "npm i && npm run build",
+    "postversion": "git push && git push --tags"
   },
   "repository": "https://github.com/joeferner/node-http-mitm-proxy",
   "bugs": {
